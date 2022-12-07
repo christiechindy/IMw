@@ -19,7 +19,7 @@
 }
 
 .wrapper {
-    max-width: 1100px;
+    width: 1100px;
     margin: 0 auto;
 }
 
@@ -86,6 +86,58 @@ header.page-header .searchBar #search{
     color: #000;
     outline: none;
 }
+
+/*--------------MOVIE----------------*/
+.movie {
+    width: 200px;
+}
+
+.movie .moviePortrait img{
+    width: 200px;
+    border-radius: 18px;
+}
+
+.movie .glassy {
+    position: relative;
+    top: -23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(180deg, rgba(12, 12, 12, 0.022) 0%, rgba(0, 0, 0, 0.22) 100%);
+    backdrop-filter: blur(3.74217px);
+
+    /* border-width: 0.75px;
+    border-style: solid;
+    border-image: linear-gradient(rgba(255,255,255,0) 20%, #fff 100%) 2; */
+    
+    border-bottom: 0.75px solid #fefefe;
+
+    border-radius: 0 0 18px 18px;
+    padding: 12px 16px;
+}
+
+.movie .glassy .addWatchList *{
+    width: 20px;
+}
+
+.movie .glassy .rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.movie .glassy .rating .ratVal {
+    font-size: 11px;
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+.movie .glassy .movieTitle {
+    font-size: 16px;
+}
+
+
 
 /*-------------FOOTER---------------*/
 footer.page-footer {
