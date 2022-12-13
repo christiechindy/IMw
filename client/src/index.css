@@ -197,3 +197,90 @@ footer.page-footer .wrapper .teamMembers .name {
     color: var(--secondary);
     margin-bottom: 10px;
 }
+
+/* Home  */
+.wrapper h1{
+    font-size: 28px;
+    font-weight: 600;
+    color: #FFB800;
+    margin: 12px 0;
+}
+/* End Home */
+
+/* mainSlider */
+.mainSlider{
+    margin: 20px 0;
+}
+.mainSlider img{
+    width: 100%;
+}
+
+/* End mainSlider */
+
+/* Top Picks */
+.topPicks .subsesTitle{
+    font-size: 24px;
+    font-weight: 600;
+    border-left: 5px solid #FF0000;
+    padding: 0 23px;
+}
+
+.descriptions{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.descriptions p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.singleRowMovie{
+    display: flex;
+    justify-content: space-around;
+}
+/* End Top Picks */
+
+/* Fan Favorites */
+.fanFavorites{
+    margin: 60px 0;
+}
+.fanFavorites .subsesTitle{
+    font-size: 24px;
+    font-weight: 600;
+    border-left: 5px solid #FF0000;
+    padding: 0 23px;
+}
+/* end Fan Favorites */
+
+
+/* In Theaters */
+.inTheaters .subsesTitle{
+    font-size: 24px;
+    font-weight: 600;
+    border-left: 5px solid #FF0000;
+    padding: 0 23px;
+}
+/* End In Theaters */
+
+/* Recently Viewed */
+.recentlyViewed{
+    margin: 70px 0;
+}
+
+.viewed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.viewed h2{
+    font-size: 28px;
+}
+
+.viewed p{
+    font-size: 15px;
+}
+/* End Recently Viewed */
