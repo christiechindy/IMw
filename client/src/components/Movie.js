@@ -15,7 +15,7 @@ export default function Movie() {
                             <div className="star"><Star/></div>
                             <div className="ratVal">7.2</div>
                         </div>
-                        <div className="movieTitle">the Menu</div>
+                        <div className="movieTitle">the Menu (2022)</div>
                     </div>
                     <div className="addWatchList"><Bookmark/></div>
                 </div>
