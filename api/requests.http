@@ -1,41 +1,57 @@
+###
+
 GET http://localhost:3001/movies
 
 ###
+GET http://localhost:3001/movies/topPicks
+
+### action, horror, thriller, romance, drama, scifi, historical, family, fantasy, comedy
 
 POST http://localhost:3001/movie/new
 Content-Type: application/json
 
 {
-    "title": "Bunda Maria",
-    "year": 2003,
-    "rating": 7.5,
+    "title": "The Call",
+    "year": 2020,
+    "rating": 7,
     "fanFav": true,
-    "genres": ["fantasy", "family"],
-    "duration": 118,
-    "synopsis": "Adaptation of the first of J.K. Rowling's popular children's novels about Harry Potter, a boy who learns on his eleventh birthday that he is the orphaned son of two powerful wizards and possesses unique magical powers of his own. He is summoned from his life as an unwanted child to become a student at Hogwarts, an English boarding school for wizards.",
-    "authors": "J. K. Rowling, Mutia Rahman, Adil Nusabakti",
-    "trailerLink": "https://youtu.be/VyHV0BRtdxo",
-    "portraitImg": "https://bimamedia-gurusiana.ap-south-1.linodeobjects.com/94d879f8d2ecd72978ee95e5f03194e2/2022/01/12/l-harry-potter-and-the-chamber-of-secretsjpg20220112002636.jpeg",
-    "landscapeImg": "https://www.peacocktv.com/dam/growth/assets/seo/HarryPotter/CoS/hp-cos-og.png",
-    "photos": ["https://m.media-amazon.com/images/M/MV5BMTM3NjUxNjY4M15BMl5BanBnXkFtZTcwMzU1MTcwNA@@._V1_.jpg", "https://m.media-amazon.com/images/M/MV5BMTgxNzc1NTY0MF5BMl5BanBnXkFtZTcwMzY1MTcwNA@@._V1_.jpg", "https://m.media-amazon.com/images/M/MV5BYmNjYzkzZTQtODI1ZS00ODA4LWFiNGMtOGQzYjljNTFiYzIyXkEyXkFqcGdeQXVyNjQ4ODE4MzQ@._V1_.jpg"],
+    "genres": ["horror"],
+    "duration": 112,
+    "synopsis": "Two people live in different times. Seo-Yeon lives in the present and Young-Sook lives in the past. One phone call connects the two, and their lives are changed irrevocably.",
+    "authors": "Le Chung-hyeon, Sergio Casci",
+    "trailerLink": "https://youtu.be/hxkKeniT-0Q",
+    "portraitImg": "https://krilianeh.files.wordpress.com/2020/12/poster-the-call.jpg",
+    "landscapeImg": "https://decode.uai.ac.id/wp-content/uploads/2021/10/28112020_the-call.jpg",
+    "photos": ["https://www.imdb.com/title/tt10530176/mediaviewer/rm676797441/?ref_=tt_md_1", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD034fEcZaCtGPhODGC-nuG0pengd-wkJbbQ&usqp=CAU", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIuqPDSDp5cbUUCZnnsP-7Jpj8v1kyoNOZVA&usqp=CAU", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq0sZTn2gFnEET_fEpt36zUJ4qa1ZZLXgj9g&usqp=CAU", "https://akcdn.detik.net.id/community/media/visual/2020/12/04/film-the-call_169.jpeg?w=620"],
     "topCasts": [
         {
-            "face": "https://i1.sndcdn.com/artworks-000429837195-jq0x5z-t500x500.jpg",
-            "namaAsli": "Daniel Radcliffe",
-            "namaDiFilm": "Harry Potter"
+            "face": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRN5GNGGGXAIB8waOtJB5TSfzUVsl2WEXYMrBSpCKL3jUt7FBdn",
+            "namaAsli": "Park Shin-Hye",
+            "namaDiFilm": "Seo-yeon"
         },
         {
-            "face": "https://img.okezone.com/content/2022/08/22/624/2652178/7-tips-belajar-yang-efektif-dari-si-cerdas-hermione-granger-sahabat-harry-potter-ISjtoqah20.jpg",
-            "namaAsli": "Emma Watson",
-            "namaDiFilm": "Hermione Granger"
+            "face": "https://media.suara.com/pictures/970x544/2022/06/22/21892-potret-jeon-jong-seo.jpg",
+            "namaAsli": "Jeon Jong-seo",
+            "namaDiFilm": "Young-sook"
+        },
+        {
+            "face": "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSHvqENWTlTE7BUdQaEu5Kg68IesIE-z_Jhyzj9_sDxlWtkI0pXrU-MBwu27z5VDFpb",
+            "namaAsli": "Kim Sung-ryung",
+            "namaDiFilm": "Seo-yeon’s mother"
+        },
+        {
+            "face": "https://akcdn.detik.net.id/community/media/visual/2017/01/24/cba27c3d-a82f-4bdc-8454-2ce96aa304d8_43.jpg?w=250&q=",
+            "namaAsli": "Lee El",
+            "namaDiFilm": "Young-sook’s mother"
+        },
+        {
+            "face": "https://cdn.idntimes.com/content-images/community/2020/09/20200904-155737-e838e1a37ba4bf017f0a0f06c3f6d26b.jpg",
+            "namaAsli": "Park Ho-san",
+            "namaDiFilm": "Seo-yeon’s father"
         }
     ]
 }
 
 ###
 
-DELETE http://localhost:3001/movie/delete/639ad17426097a185782036e
-
-###
-
-GET http://localhost:3001/movie/comment/639ad5cc55b66cc03e592ae7
+DELETE http://localhost:3001/movie/delete/639bd01261b2994df1eaa1af

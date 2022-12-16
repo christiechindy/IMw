@@ -25,10 +25,33 @@ mongoose.connect(uri , {
 
 const Movie = require('./models/MovieSch');
 
+//find all movies
 app.get('/movies', async(req, res) => {
     const movies = await Movie.find();
 
     res.json(movies);
+    console.log("ambil movie dari dtabase")
+})
+
+//find topPicks movies
+app.get('/movies/topPicks', async(req, res) => {
+    const topPicksM = await Movie.find({"topPicks" : true});
+
+    res.json(topPicksM);
+})
+
+//find fanFav movies
+app.get('/movies/fanFav', async(req, res) => {
+    const fanFavM = await Movie.find({"fanFav": true});
+
+    res.json(fanFavM);
+})
+
+//find inTheaters movies
+app.get('/movies/inTheaters', async(req, res) => {
+    const inTheaters = await Movie.find({"inTheaters": true});
+
+    res.json(inTheaters);
 })
 
 app.post('/movie/new', async(req, res) => {

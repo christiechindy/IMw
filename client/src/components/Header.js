@@ -9,7 +9,7 @@ export default function Header() {
                     <LogoIcon/>
                     <div className="text">IMw</div>
                 </div>
-                <div className="menu">Menu</div>
+                <div className="menu">Genres</div>
                 <div className="searchBar">
                     <SearchIcon/>
                     <span className="line"></span>

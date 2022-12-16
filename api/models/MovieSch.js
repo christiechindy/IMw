@@ -26,7 +26,7 @@ const movieSchema = new Schema({
         required: true
     },
     rating: {
-        type: Schema.Types.Decimal128,
+        type: Number,
         required: true
     },
     topPicks: {
@@ -73,7 +73,8 @@ const movieSchema = new Schema({
     photos: [String],
     topCasts: [topCastsSchema],
     comments: [commentSchema]
-});
+}, {collection: 'movies'});
+
 
 const Movie = mongoose.model("Movie", movieSchema);
 

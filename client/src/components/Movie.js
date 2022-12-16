@@ -1,24 +1,21 @@
 import Star from "../icons/Star";
-import theMenu from "../images/theMenu.png";
 import Bookmark from "../icons/Bookmark";
 
-export default function Movie() {
+export default function Movie({poster, title, year, rating}) {
     return(
-        <div className="wrapper">
-            <div className="movie">
-                <div className="moviePortrait">
-                    <img src={theMenu} alt="the Menu" />
-                </div>
-                <div className="glassy">
-                    <div className="leftText">
-                        <div className="rating">
-                            <div className="star"><Star/></div>
-                            <div className="ratVal">7.2</div>
-                        </div>
-                        <div className="movieTitle">the Menu (2022)</div>
+        <div className="movie">
+            <div className="moviePortrait">
+                <img src={poster} alt={title} />
+            </div>
+            <div className="glassy">
+                <div className="leftText">
+                    <div className="rating">
+                        <div className="star"><Star/></div>
+                        <div className="ratVal">{rating} / 10</div>
                     </div>
-                    <div className="addWatchList"><Bookmark/></div>
+                    <div className="movieTitle">{title} ({year})</div>
                 </div>
+                <div className="addWatchList"><Bookmark/></div>
             </div>
         </div>
     );

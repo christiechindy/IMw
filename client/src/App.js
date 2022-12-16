@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 
 import React from 'react';
 import {Route, Routes} from 'react-router-dom';
+import PerMovie from "./pages/PerMovie";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
             <Header/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
+                <Route path="/permovie" element={<PerMovie/>}/>
             </Routes>
             <Footer/>
         </div>
