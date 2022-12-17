@@ -30,11 +30,11 @@ export default function Footer() {
                     </div>
                     <div className="member">
                         <div className="name">Muh. Adil Nusabakti</div>
-                        <div className="nim">D1212010XX</div>
+                        <div className="nim">D121201094</div>
                     </div>
                     <div className="member">
                         <div className="name">Mutia Rahman</div>
-                        <div className="nim">D1212010XX</div>
+                        <div className="nim">D121201058</div>
                     </div>
                 </div>
             </div>
