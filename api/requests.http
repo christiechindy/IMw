@@ -17,54 +17,43 @@ POST http://localhost:3001/movie/new
 Content-Type: application/json
 
 {
-    "title": "Violent Night",
-    "year": 2022,
-    "rating": 7,
-    "inTheaters": true,
-    "genres": ["comedy"],
-    "duration": 112,
-    "synopsis": "Ketika tim tentara bayaran menerobos masuk ke kompleks keluarga kaya pada Malam Natal, menjadikan semua orang sandera, lalu tim ini dikejutkan oleh Santa Claus yang hadir dan melawan mereka, dia akan menunjukkan mengapa Nick ini bukan orang suci",
-    "authors": "Tommy Wirkola",
-    "trailerLink": "https://youtu.be/a53e4HHnx_s",
-    "portraitImg": "https://m.media-amazon.com/images/M/MV5BYzg2NWNhOWItYjA3Yi00MzhhLTg4ZmItYzM3ZTIwN2U0ZGQ5XkEyXkFqcGdeQXVyMzEyMDQzNzY@._V1_FMjpg_UX1000_.jpg",
-    "landscapeImg": "https://www.plymouth.edu/theclock/wp-content/uploads/sites/183/2022/12/Violent-Night-Header.jpg",
-    "photos": ["https://www.cultura.id/wp-content/uploads/2022/12/Violent-Night-Review.jpg", "https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://static.onecms.io/wp-content/uploads/sites/6/2022/11/04/Violent-Night-01-David-Harbour-110422.jpg&w=640&h=360&q=90&c=cc", "https://awsimages.detik.net.id/community/media/visual/2022/11/30/violent-night-2022-1.jpeg?w=1200", "https://static1.srcdn.com/wordpress/wp-content/uploads/2022/10/David-Harbour-as-Santa-in-Violent-Night-Trailer-.jpg", "https://hips.hearstapps.com/vidthumb/images/violent-night-david-harbour-1664983269.jpg"],
+    "title": "",
+    "year": ,
+    "rating": ,
+    "topPicks": ,
+    "genres": [""],
+    "duration": ,
+    "synopsis": "",
+    "authors": "",
+    "trailerLink": "",
+    "portraitImg": "",
+    "landscapeImg": "",
+    "photos": ["", "", "", "", ""],
     "topCasts": [
         {
-            "face": "https://imageio.forbes.com/specials-images/imageserve/6387d82ebc21404899db9779/Violent-Night--David-Harbour--interview--review--Die-Hard--Santa--Home-Alone-/960x0.jpg?format=jpg&width=960",
-            "namaAsli": "David Harbour",
-            "namaDiFilm": "Santa Claus"
+            "face": "",
+            "namaAsli": "",
+            "namaDiFilm": ""
         },
         {
-            "face": "https://i.ytimg.com/vi/XngGNQOj5tM/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBkgSyh_MA8=&rs=AOn4CLBHvrkBhy9YLqIrgd69zzaz0XD4fQ",
-            "namaAsli": "John Leguizamo",
-            "namaDiFilm": "Mr.Scrooge"
+            "face": "",
+            "namaAsli": "",
+            "namaDiFilm": ""
         },
         {
-            "face": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2022%2F12%2F01%2FViolent-Night-Beverly-D-Angelo-120122_2.jpg",
-            "namaAsli": "Beverly D'Angelo",
-            "namaDiFilm": "Gertrude Lightstone"
+            "face": "",
+            "namaAsli": "",
+            "namaDiFilm": ""
         },
         {
-            "face": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/12/violent-night-alex-hassell.jpg",
-            "namaAsli": "Alex Hassell",
-            "namaDiFilm": "Jason Lightstone"
+            "face": "",
+            "namaAsli": "",
+            "namaDiFilm": ""
         },
         {
-            "face": "https://preview.redd.it/saw-the-movie-violent-night-today-and-dylans-main-man-cam-v0-qnissvgzhu4a1.jpg?width=640&crop=smart&auto=webp&s=4d65df87f2d21ee8350300c2e33cf2a245985123",
-            "namaAsli": "Cam Gigandet",
-            "namaDiFilm": "Morgan Steel"
-        }
-    ],
-    "comments": [
-        {
-            "whoComment": "Montilee Stormer",
-            "hisComment": "Violent Night is not just a horror movie. This is a really inventive, super fun sleigh ride with better-than-average dialogue, and energetic fight scenes with a man dressed in several layers of fur and leather.",
-            "liked": true
-        },
-        {
-            "whoComment": "Collin Bigs",
-            "hisComment": "Very self-aware, Violent Night knows just what tropes to poke and when to lean into sincerity. The film shares a similar tone with Deadpool 2; while it goes for gut laughs, you don’t leave with a caustic feeling."
+            "face": "",
+            "namaAsli": "",
+            "namaDiFilm": ""
         }
     ]
 }
