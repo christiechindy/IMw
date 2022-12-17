@@ -2,12 +2,19 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Movie from '../components/Movie';
 
 const API_BASE = "http://localhost:3001";
 
 export default function PerGenre() {
     const {genres} = useParams(); //ini namany hrs sm dgn yg di define di App.js, klo tdk, tdk mauki
+
+    const locationn = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [locationn]);
+
 
     const [movies, setMovies] = useState([]);
 

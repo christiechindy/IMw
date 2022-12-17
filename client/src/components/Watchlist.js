@@ -25,8 +25,8 @@ export default function Watchlist(){
     return(
         <div className="watchlist">
             <div className="viewed">
-                <h2 className="subsesTitle">Watchlist</h2>
-                <p>clear</p>
+                <Link to="/movies/watchlist" style={{textDecoration: "none"}}><h2 className="subsesTitle">Watchlist</h2></Link>
+                <Link to="/movies/watchlist" style={{textDecoration: "none"}}><p>See all</p></Link>
             </div>
             <div className="singleRowMovie">
                 {movies && movies.map(movie => (

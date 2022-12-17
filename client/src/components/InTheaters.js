@@ -27,7 +27,7 @@ export default function InTheaters(){
             <h2 className="subsesTitle">In theaters</h2>
             <div className="descriptions">
                 <p>Are available to watch on Cinema XXI</p>
-                <p>See all</p>
+                <Link to="/movies/inTheaters" style={{textDecoration: "none"}}><p>See all</p></Link>
             </div>
             <div className="singleRowMovie">
                 {movies && movies.map(movie => (

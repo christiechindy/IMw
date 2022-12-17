@@ -8,10 +8,10 @@ export default function Header() {
     return(
         <header className="page-header">
             <div className="wrapper">
-                <div className="logo">
+                <Link to="/" style={{textDecoration: "none"}}><div className="logo">
                     <LogoIcon/>
                     <div className="text">IMw</div>
-                </div>
+                </div></Link>
                 <DropdownButton 
                     id="dropdown-basic-button" 
                     title="Genres" 
@@ -55,8 +55,8 @@ export default function Header() {
                     <span className="line"></span>
                     <input type="text" id="search" placeholder="Search movie..."/>
                 </div>
-                <div className="watchList">Watchlist</div>
-                <div className="login">Login</div>
+                <Link to="/movies/watchlist" style={{textDecoration: "none"}}><div className="watchList">Watchlist</div></Link>
+                <Link to="/movies/fanfav" style={{textDecoration: "none"}}><div className="login">Fan Favorites</div></Link>
             </div>
         </header>
     );

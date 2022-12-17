@@ -1,6 +1,7 @@
 import Movie from "./Movie";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const API_BASE = "http://localhost:3001";
 
@@ -25,7 +26,7 @@ export default function FanFavorites(){
             <h2 className="subsesTitle">Fan Favorites</h2>
             <div className="descriptions">
                 <p>High rating and trending movies</p>
-                <p>See all</p>
+                <Link to="/movies/fanfav" style={{textDecoration: "none"}}><p>See all</p></Link>
             </div>
             <div className="singleRowMovie">
                 {movies && movies.map(movie => (

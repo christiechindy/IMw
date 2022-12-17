@@ -6,9 +6,12 @@ import BookMarkSimple from '../icons/BookMarkSimple'
 import ReportIcon from '../icons/ReportIcon'
 import { useState } from "react";
 import { useEffect } from "react";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import Bookmarked from '../icons/Bookmarked'
+
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 const API_BASE = "http://localhost:3001";
 
@@ -43,12 +46,21 @@ export default function PerMovie() {
         setWl(wl => !wl)
     }
 
-    const [reportModal, setReportModal] = useState(false);
+    const [show, setShow] = useState(false);
+    const handleClose = () => {setShow(false)};
+    const handleShow = () => setShow(true);
+
+    const navigate = useNavigate();
+    const handleSend = () => {
+        deleteMovie();
+        alert("The Movie has been deleted");
+        setShow(false);
+        navigate(-1);
+    }
 
     function deleteMovie() {
-        fetch(API_BASE + "/movie/delete/" + id)
+        fetch(API_BASE + "/movie/delete/" + id, {method: "DELETE"})
             .then(res => res.json());
-
     }
 
     return (
@@ -97,18 +109,48 @@ export default function PerMovie() {
                                     </>
                                 }
                             </div>
-                            <div className="reportBtn" onClick={() => setReportModal(true)}>
+                            <div className="reportBtn" onClick={handleShow}>
                                 <div className="icon"><ReportIcon /></div>
                                 <span>Delete Movie</span>
                             </div>
+                            <Modal show={show} onHide={handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>Report Movie</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    Why do you want to report the movie? <div style={{height: "6px"}}></div>
+                                    <input type="radio" name="rep" id="sex" checked />
+                                    <label htmlFor="sex">Sexual Content</label>
+                                    <br/>
+                                    <input type="radio" name="rep" id="violent" />
+                                    <label htmlFor="violent">Violent or repulsive content</label>
+                                    <br/>
+                                    <input type="radio" name="rep" id="hate" />
+                                    <label htmlFor="hate">Hateful or abusive content</label>
+                                    <br/>
+                                    <input type="radio" name="rep" id="bully" />
+                                    <label htmlFor="bully">Harassment or bullying</label>
+                                    <br/>
+                                    <input type="radio" name="rep" id="harm" />
+                                    <label htmlFor="harm">Harmful or dangerous acts</label>
+                                    <br/>
+                                    <input type="radio" name="rep" id="childab" />
+                                    <label htmlFor="childab">Child abuse</label>
+                                    <br/>
+                                    <input type="radio" name="rep" id="terror" />
+                                    <label htmlFor="terror">Terrorism</label>
+                                    <br/>
+                                </Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="secondary" onClick={handleClose}>
+                                        Cancel
+                                    </Button>
+                                    <Button variant="primary" onClick={handleSend}>
+                                        Send
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal>
                         </div>
-                        { reportModal ? (
-                            <>
-                                <div className="fullCover"></div>
-                                <div className="modal"></div>
-                            </>
-                            ) : ''
-                        }
                     </div>
                 </div>
             </div>

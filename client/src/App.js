@@ -6,6 +6,7 @@ import React from 'react';
 import {Route, Routes} from 'react-router-dom';
 import PerMovie from "./pages/PerMovie";
 import PerGenre from "./pages/PerGenre";
+import ReportModal from "./components/ReportModal";
 
 function App() {
     return (

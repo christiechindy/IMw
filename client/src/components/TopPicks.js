@@ -2,6 +2,7 @@ import Movie from "./Movie";
 import React from 'react';
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const API_BASE = "http://localhost:3001";
 
@@ -43,7 +44,7 @@ export default function TopPicks() {
             <h2 className="subsesTitle">Top Picks</h2>
             <div className="descriptions">
                 <p>Specially chosen by Top Editors</p>
-                <p>See all</p>
+                <Link to="/movies/topPicks" style={{textDecoration: "none"}}><p>See all</p></Link>
             </div>
             <div className="singleRowMovie">
                 {movies && movies.map(movie => (
