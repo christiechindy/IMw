@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import imgone from '../images/spider.webp';
+import imgtwo from '../images/avengers.webp';
+import imgthr from '../images/joker.webp';
 
 export default function MainSlider() {
     const [index, setIndex] = useState(0);
@@ -15,7 +18,7 @@ export default function MainSlider() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://wallpaperaccess.com/full/645142.jpg"
+                        src={imgtwo}
                         alt="First slide"
                     />
                     {/* <Carousel.Caption>
@@ -26,7 +29,7 @@ export default function MainSlider() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://occ-0-3211-999.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABZfBKxr5geoqhza48rMohYhf7Af1RjoR3NhYXNuSAmEmlbiUps6eueocRDnbuEc8r_ClE5MeRFZvdbegKXtcwMWohVL2uWqaDyRu.jpg?r=909"
+                        src={imgthr}
                         alt="Second slide"
                     />
 
