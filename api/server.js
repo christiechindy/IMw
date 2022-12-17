@@ -7,11 +7,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-//mongodb+srv://imw-6:<password>@cluster0.r32d2k1.mongodb.net/?retryWrites=true&w=majority
 //database name: imwDB
 //collection name: movies
 
-const uri = "mongodb+srv://imw-6:IMw_Klp6_PW_KlsC@cluster0.r32d2k1.mongodb.net/?retryWrites=true&w=majority"
+const uri = "mongodb+srv://username:password@cluster0.r32d2k1.mongodb.net/?retryWrites=true&w=majority"
 
 mongoose.connect(uri , {
     useNewUrlParser: true,
