@@ -3,7 +3,7 @@ import FanFavorites from "../components/FanFavorites";
 import MainSlider from "../components/mainSlider";
 import TopPicks from "../components/TopPicks";
 import InTheaters from "../components/InTheaters";
-import RecentlyViewed from "../components/RecentlyViewed";
+import Watchlist from "../components/Watchlist";
 
 export default function Home() {
     return(
@@ -15,7 +15,7 @@ export default function Home() {
                 <FanFavorites />
                 <h1 className="sessionTitle">Explore Movies & TV Shows</h1>
                 <InTheaters/>
-                <RecentlyViewed/>
+                <Watchlist/>
             </div>
         </>
     );

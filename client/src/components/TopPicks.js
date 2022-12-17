@@ -1,5 +1,4 @@
 import Movie from "./Movie";
-import AngleRight from "../icons/AngleRight";
 import React from 'react';
 import { useState } from "react";
 import { useEffect } from "react";
@@ -13,7 +12,7 @@ export default function TopPicks() {
         GetMovies();
 
         console.log(movies);
-    }, [])
+    }, [movies])
 
     const GetMovies = () => {
         fetch(API_BASE + "/movies/topPicks")
@@ -46,11 +45,15 @@ export default function TopPicks() {
                 <p>Specially chosen by Top Editors</p>
                 <p>See all</p>
             </div>
-            <div className="nextShadow"></div>
-            <div className="nextArrow"><AngleRight/></div>
             <div className="singleRowMovie">
-                {movies.map(movie => (
-                    <Movie poster={movie.portraitImg} title={movie.title} year={movie.year} rating={movie.rating} /> 
+                {movies && movies.map(movie => (
+                    <Movie 
+                        id={movie._id} 
+                        poster={movie.portraitImg} 
+                        title={movie.title} 
+                        year={movie.year} 
+                        rating={movie.rating} 
+                        watchlist={movie.watchlist} />                   
                 ))}
             </div>
         </div>

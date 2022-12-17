@@ -7,14 +7,14 @@ const topCastsSchema = new Schema({
     namaDiFilm: String
 })
 
-const commentSchema = new Schema({
-    whoComment: String,
-    hisComment: String,
-    liked: {
-        type: Boolean,
-        default: false
-    }
-})
+// const commentSchema = new Schema({
+//     whoComment: String,
+//     hisComment: String,
+//     liked: {
+//         type: Boolean,
+//         default: false
+//     }
+// })
 
 const movieSchema = new Schema({
     title: {
@@ -71,8 +71,8 @@ const movieSchema = new Schema({
         required: true
     },
     photos: [String],
-    topCasts: [topCastsSchema],
-    comments: [commentSchema]
+    topCasts: [topCastsSchema]
+    // comments: [commentSchema]
 }, {collection: 'movies'});
 
 

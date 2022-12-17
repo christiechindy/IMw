@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import React from 'react';
 import {Route, Routes} from 'react-router-dom';
 import PerMovie from "./pages/PerMovie";
+import PerGenre from "./pages/PerGenre";
 
 function App() {
     return (
@@ -19,7 +20,9 @@ function App() {
             <Header/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
-                <Route path="/permovie" element={<PerMovie/>}/>
+                {/* <Route path="/movie" element={<Home/>} /> */}
+                <Route path="/movie/:id" element={<PerMovie/>}/>
+                <Route path="/movies/:genres" element={<PerGenre />} />
             </Routes>
             <Footer/>
         </div>

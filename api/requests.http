@@ -5,53 +5,79 @@ GET http://localhost:3001/movies
 ###
 GET http://localhost:3001/movies/topPicks
 
-### action, horror, thriller, romance, drama, scifi, historical, family, fantasy, comedy
+###
+GET http://localhost:3001/movies/action
+
+### find specific movie
+GET http://localhost:3001/movie/639c2b84c78dcbc8dd208734
+
+### Action, Horror, thriller, Romance, Drama, Scifi, Historical, Family, Fantasy, Comedy
 
 POST http://localhost:3001/movie/new
 Content-Type: application/json
 
 {
-    "title": "The Call",
-    "year": 2020,
+    "title": "Violent Night",
+    "year": 2022,
     "rating": 7,
-    "fanFav": true,
-    "genres": ["horror"],
+    "inTheaters": true,
+    "genres": ["comedy"],
     "duration": 112,
-    "synopsis": "Two people live in different times. Seo-Yeon lives in the present and Young-Sook lives in the past. One phone call connects the two, and their lives are changed irrevocably.",
-    "authors": "Le Chung-hyeon, Sergio Casci",
-    "trailerLink": "https://youtu.be/hxkKeniT-0Q",
-    "portraitImg": "https://krilianeh.files.wordpress.com/2020/12/poster-the-call.jpg",
-    "landscapeImg": "https://decode.uai.ac.id/wp-content/uploads/2021/10/28112020_the-call.jpg",
-    "photos": ["https://www.imdb.com/title/tt10530176/mediaviewer/rm676797441/?ref_=tt_md_1", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD034fEcZaCtGPhODGC-nuG0pengd-wkJbbQ&usqp=CAU", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIuqPDSDp5cbUUCZnnsP-7Jpj8v1kyoNOZVA&usqp=CAU", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq0sZTn2gFnEET_fEpt36zUJ4qa1ZZLXgj9g&usqp=CAU", "https://akcdn.detik.net.id/community/media/visual/2020/12/04/film-the-call_169.jpeg?w=620"],
+    "synopsis": "Ketika tim tentara bayaran menerobos masuk ke kompleks keluarga kaya pada Malam Natal, menjadikan semua orang sandera, lalu tim ini dikejutkan oleh Santa Claus yang hadir dan melawan mereka, dia akan menunjukkan mengapa Nick ini bukan orang suci",
+    "authors": "Tommy Wirkola",
+    "trailerLink": "https://youtu.be/a53e4HHnx_s",
+    "portraitImg": "https://m.media-amazon.com/images/M/MV5BYzg2NWNhOWItYjA3Yi00MzhhLTg4ZmItYzM3ZTIwN2U0ZGQ5XkEyXkFqcGdeQXVyMzEyMDQzNzY@._V1_FMjpg_UX1000_.jpg",
+    "landscapeImg": "https://www.plymouth.edu/theclock/wp-content/uploads/sites/183/2022/12/Violent-Night-Header.jpg",
+    "photos": ["https://www.cultura.id/wp-content/uploads/2022/12/Violent-Night-Review.jpg", "https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://static.onecms.io/wp-content/uploads/sites/6/2022/11/04/Violent-Night-01-David-Harbour-110422.jpg&w=640&h=360&q=90&c=cc", "https://awsimages.detik.net.id/community/media/visual/2022/11/30/violent-night-2022-1.jpeg?w=1200", "https://static1.srcdn.com/wordpress/wp-content/uploads/2022/10/David-Harbour-as-Santa-in-Violent-Night-Trailer-.jpg", "https://hips.hearstapps.com/vidthumb/images/violent-night-david-harbour-1664983269.jpg"],
     "topCasts": [
         {
-            "face": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRN5GNGGGXAIB8waOtJB5TSfzUVsl2WEXYMrBSpCKL3jUt7FBdn",
-            "namaAsli": "Park Shin-Hye",
-            "namaDiFilm": "Seo-yeon"
+            "face": "https://imageio.forbes.com/specials-images/imageserve/6387d82ebc21404899db9779/Violent-Night--David-Harbour--interview--review--Die-Hard--Santa--Home-Alone-/960x0.jpg?format=jpg&width=960",
+            "namaAsli": "David Harbour",
+            "namaDiFilm": "Santa Claus"
         },
         {
-            "face": "https://media.suara.com/pictures/970x544/2022/06/22/21892-potret-jeon-jong-seo.jpg",
-            "namaAsli": "Jeon Jong-seo",
-            "namaDiFilm": "Young-sook"
+            "face": "https://i.ytimg.com/vi/XngGNQOj5tM/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBkgSyh_MA8=&rs=AOn4CLBHvrkBhy9YLqIrgd69zzaz0XD4fQ",
+            "namaAsli": "John Leguizamo",
+            "namaDiFilm": "Mr.Scrooge"
         },
         {
-            "face": "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSHvqENWTlTE7BUdQaEu5Kg68IesIE-z_Jhyzj9_sDxlWtkI0pXrU-MBwu27z5VDFpb",
-            "namaAsli": "Kim Sung-ryung",
-            "namaDiFilm": "Seo-yeon’s mother"
+            "face": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2022%2F12%2F01%2FViolent-Night-Beverly-D-Angelo-120122_2.jpg",
+            "namaAsli": "Beverly D'Angelo",
+            "namaDiFilm": "Gertrude Lightstone"
         },
         {
-            "face": "https://akcdn.detik.net.id/community/media/visual/2017/01/24/cba27c3d-a82f-4bdc-8454-2ce96aa304d8_43.jpg?w=250&q=",
-            "namaAsli": "Lee El",
-            "namaDiFilm": "Young-sook’s mother"
+            "face": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/12/violent-night-alex-hassell.jpg",
+            "namaAsli": "Alex Hassell",
+            "namaDiFilm": "Jason Lightstone"
         },
         {
-            "face": "https://cdn.idntimes.com/content-images/community/2020/09/20200904-155737-e838e1a37ba4bf017f0a0f06c3f6d26b.jpg",
-            "namaAsli": "Park Ho-san",
-            "namaDiFilm": "Seo-yeon’s father"
+            "face": "https://preview.redd.it/saw-the-movie-violent-night-today-and-dylans-main-man-cam-v0-qnissvgzhu4a1.jpg?width=640&crop=smart&auto=webp&s=4d65df87f2d21ee8350300c2e33cf2a245985123",
+            "namaAsli": "Cam Gigandet",
+            "namaDiFilm": "Morgan Steel"
+        }
+    ],
+    "comments": [
+        {
+            "whoComment": "Montilee Stormer",
+            "hisComment": "Violent Night is not just a horror movie. This is a really inventive, super fun sleigh ride with better-than-average dialogue, and energetic fight scenes with a man dressed in several layers of fur and leather.",
+            "liked": true
+        },
+        {
+            "whoComment": "Collin Bigs",
+            "hisComment": "Very self-aware, Violent Night knows just what tropes to poke and when to lean into sincerity. The film shares a similar tone with Deadpool 2; while it goes for gut laughs, you don’t leave with a caustic feeling."
         }
     ]
 }
 
-###
+### add to watchlist
+GET http://localhost:3001/movie/addToWatchlist/639c2b84c78dcbc8dd208734
 
-DELETE http://localhost:3001/movie/delete/639bd01261b2994df1eaa1af
+###commenttttt
+GET http://localhost:3001/movie/comment/639c2c08c78dcbc8dd208813
+
+
+### like comment
+GET http://localhost:3001/movie/639c2c08c78dcbc8dd208813/like/639c3383e016d4f88f8c040b
+
+###
+DELETE http://localhost:3001/movie/delete/639bcf0a61b2994df1eaa1a1

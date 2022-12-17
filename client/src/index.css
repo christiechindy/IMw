@@ -89,12 +89,39 @@ header.page-header .searchBar #search{
     outline: none;
 }
 
+.page-header .wrapper #dropdown-basic-button {
+    background-color: #0c0c0c !important;
+    border: none;
+}
+
+.page-header .wrapper .dropdown-menu.show {
+    /* background-color: yellow; */
+    background: rgba(12, 12, 12, 0.1);
+    backdrop-filter: blur(10px);
+
+    border: 0.9px solid #575757;
+}
+
+.page-header .wrapper .dropdown-item {
+    color: white !important;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    text-transform: capitalize;
+}
+
+.page-header .wrapper .dropdown-item:hover {
+    background: rgba(188, 188, 188, 0.1);
+    backdrop-filter: blur(30px);
+    color: var(--primary) !important;
+    font-weight: 600;
+}
+
 /*--------------MOVIE----------------*/
 .movie {
     width: 200px;
     margin-right: 15px;
-
-    cursor: pointer;
 }
 
 .movie .moviePortrait img{
@@ -102,6 +129,8 @@ header.page-header .searchBar #search{
     height: 290px;
     object-fit: cover;
     border-radius: 18px;
+
+    cursor: pointer;
 }
 
 .movie .glassy {
@@ -127,8 +156,21 @@ header.page-header .searchBar #search{
 }
 
 .movie .glassy .addWatchList *{
-    width: 20px;
+    width: 23px;
+    display: flex;
+    object-fit: cover;
+    /* opacity: 85%; */
+    transition: 0.2s;
 }
+
+.movie .glassy .addWatchList {
+    display: flex;
+    cursor: cell;
+}
+
+/* .movie .glassy .addWatchList *:hover {
+    opacity: 100%;
+} */
 
 .movie .glassy .rating {
     display: flex;
@@ -221,30 +263,6 @@ footer.page-footer .wrapper .teamMembers .name {
 
 .singleRowMovie::-webkit-scrollbar {
     display: none;
-}
-
-.wrapper .nextShadow {
-    background: linear-gradient(270deg, #0C0C0C 0%, rgba(12, 12, 12, 0.8) 44.72%, rgba(12, 12, 12, 0) 90.69%);
-    /* background-color: yellow; */
-    min-width: 193px;
-    height: 343px;
-
-    position: absolute;
-    right: 0;
-    z-index: 4;
-}
-
-.fanFavorites .nextArrow, .topPicks .nextArrow, .inTheaters .nextArrow {
-    width: 20px;
-
-    position: absolute;
-    top: 244px;
-    right: 15px;
-    z-index: 8;
-
-    cursor: pointer;
-
-    visibility: hidden;
 }
 
 /*------------Carousel-------------*/
@@ -487,16 +505,12 @@ footer.page-footer .wrapper .teamMembers .name {
     font-weight: 500;
 }
 
-.perMovie .movieDescription .trailerBtn .icon {
+.perMovie .movieDescription .icon {
     width: 18px;
     margin-right: 8px;
 }
 
-.perMovie .movieDescription .watchlistBtn .icon {
-    margin-right: 8px;
-}
-
-.perMovie .movieDescription .trailerBtn, .perMovie .movieDescription .watchlistBtn {
+.perMovie .movieDescription .trailerBtn, .perMovie .movieDescription .watchlistBtn, .perMovie .movieDescription .reportBtn {
     display: flex;
     align-items: center;
     height: 43px;
@@ -518,7 +532,31 @@ footer.page-footer .wrapper .teamMembers .name {
     background-color: var(--primary);
 }
 
+.perMovie .movieDescription .reportBtn {
+    background-color: white;
+}
+
+.perMovie .movieDescription .reportBtn span {
+    color: #B80000;
+    margin-left: 3px;
+}
+
 .perMovie .movieDescription .actionBtns {
+    display: flex;
+    align-items: center;
+}
+
+.perMovie .movieDescription .actionBtns * {
+    cursor: pointer;
+}
+
+.perMovie .actionBtns a {
+    text-decoration: none;
+}
+
+.perMovie .movieDescription .watchlistBtn .icon {
+    height: 35px;
+    object-fit: cover;
     display: flex;
     align-items: center;
 }
@@ -531,6 +569,21 @@ footer.page-footer .wrapper .teamMembers .name {
 
 .perMovie .wrapper {
     height: 0px;
+}
+
+.movieDescription .fullCover {
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+    opacity: 0.5;
+    background-color: yellow;
+
+    color: white;
+    font-size: 66px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 
@@ -596,14 +649,15 @@ footer.page-footer .wrapper .teamMembers .name {
 /*------------------Reviews Section-------------*/ 
 .reviewsSection {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 
     margin-top: 110px;
 }
 
 .reviewsSection .left_others {
     max-width: 720px;
-    padding-right: 88px;
+    /* padding-right: 88px; */
+    margin-right: 88px;
 }
 
 .reviewsSection .left_others .iconCont {
@@ -718,4 +772,21 @@ footer.page-footer .wrapper .teamMembers .name {
 
     position: absolute;
     right: 0;
+}
+
+/*--------Per Cathegory Page-------------*/
+.perCathegory .subsesTitle {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.perCathegory .moviesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.perCathegory .moviesContainer .movie {
+    margin-right: 0;
 }

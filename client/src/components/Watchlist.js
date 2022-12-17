@@ -1,10 +1,12 @@
 import Movie from "./Movie";
+import React from 'react';
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const API_BASE = "http://localhost:3001";
 
-export default function FanFavorites(){
+export default function Watchlist(){
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -14,18 +16,17 @@ export default function FanFavorites(){
     }, [movies])
 
     const GetMovies = () => {
-        fetch(API_BASE + "/movies/fanFav")
+        fetch(API_BASE + "/movies/watchlist")
             .then(res => res.json())
             .then(data => setMovies(data))
             .catch(err => console.error("Error: ", err));
     }
 
     return(
-        <div className="fanFavorites">
-            <h2 className="subsesTitle">Fan Favorites</h2>
-            <div className="descriptions">
-                <p>High rating and trending movies</p>
-                <p>See all</p>
+        <div className="watchlist">
+            <div className="viewed">
+                <h2 className="subsesTitle">Watchlist</h2>
+                <p>clear</p>
             </div>
             <div className="singleRowMovie">
                 {movies && movies.map(movie => (
@@ -35,7 +36,7 @@ export default function FanFavorites(){
                     title={movie.title} 
                     year={movie.year} 
                     rating={movie.rating} 
-                    watchlist={movie.watchlist} /> 
+                    watchlist={movie.watchlist}/>                   
                 ))}
             </div>
         </div>
